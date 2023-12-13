@@ -386,7 +386,60 @@ impl Context {
                         custom: self.parse_field_custom(meta.input)?,
                         generate: generate_assign!(PROTOCOL_REM_ASSIGN, %=),
                     });
-                } else {
+                } 
+                else if meta.path == ADD {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_ADD, +),
+                    });
+                } else if meta.path == SUB {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_SUB, -),
+                    });
+                } else if meta.path == DIV {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_DIV, /),
+                    });
+                } else if meta.path == MUL {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_MUL, *),
+                    });
+                } else if meta.path == BIT_AND {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_BIT_AND, &),
+                    });
+                } else if meta.path == BIT_OR {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_BIT_OR, |),
+                    });
+                } else if meta.path == BIT_XOR {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_BIT_XOR, ^),
+                    });
+                } else if meta.path == SHL {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_SHL, <<),
+                    });
+                } else if meta.path == SHR {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_SHR, >>),
+                    });
+                } else if meta.path == REM {
+                    attr.protocols.push(FieldProtocol {
+                        custom: self.parse_field_custom(meta.input)?,
+                        generate: generate_assign!(PROTOCOL_REM, %),
+                    });
+                }
+                
+                else {
                     return Err(syn::Error::new_spanned(&meta.path, "Unsupported attribute"));
                 }
 

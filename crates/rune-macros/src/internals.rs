@@ -29,6 +29,17 @@ pub const GET: Symbol = Symbol("get");
 pub const SET: Symbol = Symbol("set");
 pub const COPY: Symbol = Symbol("copy");
 
+pub const ADD: Symbol = Symbol("add");
+pub const SUB: Symbol = Symbol("sub");
+pub const DIV: Symbol = Symbol("div");
+pub const MUL: Symbol = Symbol("mul");
+pub const BIT_AND: Symbol = Symbol("bit_and");
+pub const BIT_OR: Symbol = Symbol("bit_or");
+pub const BIT_XOR: Symbol = Symbol("bit_xor");
+pub const SHL: Symbol = Symbol("shl");
+pub const SHR: Symbol = Symbol("shr");
+pub const REM: Symbol = Symbol("rem");
+
 pub const ADD_ASSIGN: Symbol = Symbol("add_assign");
 pub const SUB_ASSIGN: Symbol = Symbol("sub_assign");
 pub const DIV_ASSIGN: Symbol = Symbol("div_assign");
@@ -39,6 +50,17 @@ pub const BIT_XOR_ASSIGN: Symbol = Symbol("bit_xor_assign");
 pub const SHL_ASSIGN: Symbol = Symbol("shl_assign");
 pub const SHR_ASSIGN: Symbol = Symbol("shr_assign");
 pub const REM_ASSIGN: Symbol = Symbol("rem_assign");
+
+pub const PROTOCOL_ADD: Symbol = Symbol("ADD");
+pub const PROTOCOL_SUB: Symbol = Symbol("SUB");
+pub const PROTOCOL_DIV: Symbol = Symbol("DIV");
+pub const PROTOCOL_MUL: Symbol = Symbol("MUL");
+pub const PROTOCOL_BIT_AND: Symbol = Symbol("BIT_AND");
+pub const PROTOCOL_BIT_OR: Symbol = Symbol("BIT_OR");
+pub const PROTOCOL_BIT_XOR: Symbol = Symbol("BIT_XOR");
+pub const PROTOCOL_SHL: Symbol = Symbol("SHL");
+pub const PROTOCOL_SHR: Symbol = Symbol("SHR");
+pub const PROTOCOL_REM: Symbol = Symbol("REM");
 
 pub const PROTOCOL_GET: Symbol = Symbol("GET");
 pub const PROTOCOL_SET: Symbol = Symbol("SET");
